@@ -2,6 +2,8 @@
 
 A Vercel-ready Next.js App Router site for KeepYeet. The production build is a static export, so `npm run build` creates `out/index.html` plus all guide and legal routes.
 
+Source for the public KeepYeet website.
+
 ## Local development
 
 ```bash
