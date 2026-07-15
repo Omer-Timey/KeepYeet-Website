@@ -1,6 +1,9 @@
 export const site = {
   name: "KeepYeet",
   url: "https://keepyeet.app",
+  locale: "en_US",
+  language: "en-US",
+  developerName: "Omer Yom Tov",
   title: "KeepYeet: Swipe Photo Cleaner & Camera Roll Cleanup",
   description:
     "Clean up your camera roll with KeepYeet, the swipe photo cleaner app. Keep what matters, delete clutter, and free up phone storage. No account required.",
@@ -62,7 +65,7 @@ export const homepageFaqs = [
   {
     question: "How can I delete unwanted photos without losing good ones?",
     answer:
-      "Keep the session small, make every decision manually, and inspect the complete deletion list before confirming. Where supported, the device photo library may also keep deleted items recoverable for up to 30 days.",
+      "Keep the session small, make every decision manually, and inspect the complete deletion list before confirming. Recovery then depends on the platform and backup state: Apple Photos documents 30 days in Recently Deleted, while Google Photos documents 60 days for backed-up items and 30 days for unbacked items.",
     href: "/guides/review-photos-before-deleting/",
     linkLabel: "Learn how to review photos before deleting",
   },
@@ -83,7 +86,7 @@ export const homepageFaqs = [
   {
     question: "Can KeepYeet clean both photos and videos?",
     answer:
-      "Yes. KeepYeet supports photos and videos, with duplicate cleanup plus dedicated views for videos, screenshots, months, albums, and Recents. Every final deletion stays under your control, and KeepYeet does not claim video compression.",
+      "Yes. KeepYeet supports photos and videos, with dedicated views for videos, screenshots, months, albums, and Recents. Every final deletion stays under your control, and KeepYeet does not claim video compression.",
     href: "/guides/delete-large-videos-to-free-space/",
     linkLabel: "Learn how to review large videos for more space",
   },

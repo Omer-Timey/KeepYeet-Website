@@ -1,30 +1,35 @@
 import type { MetadataRoute } from "next";
-import { guides } from "@/data/guides";
-import { site } from "@/data/site";
+import { getGuideScreenshotIndex, guideUpdatedAt, guides } from "@/data/guides";
+import { screenshots, site } from "@/data/site";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-07-15T00:00:00.000Z");
-  const fixedRoutes = [
-    { path: "", priority: 1, changeFrequency: "weekly" as const },
-    { path: "guides/", priority: 0.85, changeFrequency: "weekly" as const },
-    { path: "privacy/", priority: 0.3, changeFrequency: "yearly" as const },
-    { path: "terms/", priority: 0.3, changeFrequency: "yearly" as const },
+  const contentLastModified = new Date(`${guideUpdatedAt}T00:00:00.000Z`);
+  const appImages = [
+    `${site.url}/images/app-store/keepyeet-icon.webp`,
+    `${site.url}/images/app-store/keepyeet-hero-phone.webp`,
+    ...screenshots.map((shot) => `${site.url}${shot.src}`),
   ];
 
   return [
-    ...fixedRoutes.map((route) => ({
-      url: `${site.url}/${route.path}`,
-      lastModified,
-      changeFrequency: route.changeFrequency,
-      priority: route.priority,
-    })),
+    {
+      url: `${site.url}/`,
+      lastModified: contentLastModified,
+      images: appImages,
+    },
+    {
+      url: `${site.url}/guides/`,
+      lastModified: contentLastModified,
+    },
     ...guides.map((guide) => ({
       url: `${site.url}/guides/${guide.slug}/`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
+      lastModified: contentLastModified,
+      images: [
+        `${site.url}${screenshots[getGuideScreenshotIndex(guide.slug) % screenshots.length].src}`,
+      ],
     })),
+    { url: `${site.url}/privacy/` },
+    { url: `${site.url}/terms/` },
   ];
 }

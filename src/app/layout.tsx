@@ -1,8 +1,12 @@
 import type { Metadata, Viewport } from "next";
+import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/data/site";
 import "./globals.css";
+
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -25,6 +29,19 @@ export const metadata: Metadata = {
   authors: [{ name: "Omer Yom Tov" }],
   creator: "Omer Yom Tov",
   publisher: "KeepYeet",
+  category: "Utilities",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     url: "/",
@@ -51,6 +68,15 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   manifest: "/manifest.webmanifest",
+  verification:
+    googleVerification || bingVerification
+      ? {
+          ...(googleVerification ? { google: googleVerification } : {}),
+          ...(bingVerification
+            ? { other: { "msvalidate.01": bingVerification } }
+            : {}),
+        }
+      : undefined,
 };
 
 export const viewport: Viewport = {
@@ -61,9 +87,39 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const entityGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${site.url}/#developer`,
+        name: site.developerName,
+        url: site.url,
+      },
+      {
+        "@type": "Brand",
+        "@id": `${site.url}/#brand`,
+        name: site.name,
+        url: site.url,
+        logo: `${site.url}/images/app-store/keepyeet-icon.webp`,
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${site.url}/#website`,
+        name: site.name,
+        url: site.url,
+        description: site.description,
+        inLanguage: site.language,
+        publisher: { "@id": `${site.url}/#developer` },
+        about: { "@id": `${site.url}/#app` },
+      },
+    ],
+  };
+
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body>
+        <JsonLd data={entityGraph} />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
         <main id="main-content">{children}</main>

@@ -6,6 +6,8 @@ import { StoreButtons } from "@/components/store-buttons";
 import { guides } from "@/data/guides";
 import { homepageFaqs, screenshots, site } from "@/data/site";
 
+const googlePlayIsLive = process.env.NEXT_PUBLIC_GOOGLE_PLAY_LIVE === "true";
+
 const features = [
   {
     emoji: "⏱️",
@@ -20,7 +22,7 @@ const features = [
   {
     emoji: "🗂️",
     title: "Start with the messiest view",
-    body: "Open duplicates, videos, screenshots, months, albums, or Recents instead of scrolling forever.",
+    body: "Open videos, screenshots, months, albums, or Recents instead of scrolling forever.",
   },
   {
     emoji: "👀",
@@ -42,7 +44,7 @@ const features = [
 const steps = [
   {
     title: "Choose your view",
-    body: "Start with duplicates, screenshots, videos, Recents, an album, or one month that needs attention.",
+    body: "Start with screenshots, videos, Recents, an album, or one month that needs attention.",
   },
   {
     title: "Swipe through it",
@@ -59,50 +61,80 @@ const steps = [
 ];
 
 export default function HomePage() {
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: site.name,
-      url: site.url,
-      description: site.description,
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: site.name,
-      applicationCategory: "UtilitiesApplication",
-      operatingSystem: "Mobile",
-      description: site.description,
-      url: site.url,
-      downloadUrl: site.appStoreUrl,
-      image: `${site.url}/images/app-store/keepyeet-icon.webp`,
-      screenshot: screenshots.map((shot) => `${site.url}${shot.src}`),
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free to download with in-app purchases",
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5.0",
-        ratingCount: "4",
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: homepageFaqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${site.url}/#webpage`,
+        url: `${site.url}/`,
+        name: site.title,
+        description: site.description,
+        inLanguage: site.language,
+        isPartOf: { "@id": `${site.url}/#website` },
+        about: { "@id": `${site.url}/#app` },
+        mainEntity: { "@id": `${site.url}/#app` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${site.url}/images/app-store/keepyeet-hero-phone.webp`,
+          width: 1007,
+          height: 2078,
         },
-      })),
-    },
-  ];
+      },
+      {
+        "@type": ["SoftwareApplication", "MobileApplication"],
+        "@id": `${site.url}/#app`,
+        name: site.name,
+        alternateName: "KeepYeet: Swipe Delete Photos",
+        applicationCategory: "UtilitiesApplication",
+        applicationSubCategory: "Photo & Video",
+        operatingSystem: googlePlayIsLive ? "iOS 16.4 or later; Android" : "iOS 16.4 or later",
+        description: site.description,
+        url: site.url,
+        downloadUrl: googlePlayIsLive
+          ? [site.appStoreUrl, site.googlePlayUrl]
+          : site.appStoreUrl,
+        sameAs: googlePlayIsLive
+          ? [site.appStoreUrl, site.googlePlayUrl]
+          : [site.appStoreUrl],
+        image: `${site.url}/images/app-store/keepyeet-icon.webp`,
+        screenshot: screenshots.map((shot) => `${site.url}${shot.src}`),
+        featureList: [
+          "Swipe right to keep photos and videos",
+          "Swipe left to mark photos and videos for deletion",
+          "Review marked media before final deletion",
+          "Filter by videos, screenshots, months, albums, and Recents",
+          "Track cleanup progress and storage reclaimed",
+          "No account required",
+          "On-device photo-library sorting and deletion",
+        ],
+        author: { "@id": `${site.url}/#developer` },
+        publisher: { "@id": `${site.url}/#developer` },
+        brand: { "@id": `${site.url}/#brand` },
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          description: "Free to download with in-app purchases",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${site.url}/#faq`,
+        url: `${site.url}/#faq`,
+        isPartOf: { "@id": `${site.url}/#webpage` },
+        mainEntity: homepageFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
 
   return (
     <>
@@ -128,7 +160,7 @@ export default function HomePage() {
             <StoreButtons />
             <ul className="trust-list" aria-label="KeepYeet benefits">
               <li>Free to try</li>
-              <li>100% private &amp; on-device</li>
+              <li>Photos stay on-device</li>
               <li>No account needed</li>
             </ul>
           </div>

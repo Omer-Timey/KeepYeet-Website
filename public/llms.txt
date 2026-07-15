@@ -1,0 +1,39 @@
+# KeepYeet
+
+> KeepYeet is a swipe-based photo and video cleaner for people who want a fast, manual, review-first way to clean a camera roll or gallery and free phone storage.
+
+KeepYeet lets people swipe right to keep a photo or video and left to mark it for deletion. Users can work through videos, screenshots, months, albums, and Recents, then review marked items before confirming deletion. Photo-library sorting and deletion happen on-device, and no account is required. Broader analytics and advertising disclosures are documented separately in the privacy policy and store privacy label.
+
+## Product
+
+- [KeepYeet homepage](https://keepyeet.app/): Product overview, screenshots, workflow, FAQs, and download links.
+- [KeepYeet on the Apple App Store](https://apps.apple.com/app/id6759491629): Official iPhone listing, compatibility, pricing, ratings, and privacy disclosures.
+- [Photo cleanup guides](https://keepyeet.app/guides/): Index of all practical KeepYeet camera-roll and gallery-cleanup guides.
+- [Homepage FAQ](https://keepyeet.app/#faq): Direct answers about swipe deletion, review safety, storage cleanup, on-device photo handling, and platform availability.
+
+## Guides
+
+- [Swipe delete photos](https://keepyeet.app/guides/swipe-delete-photos/): How to use keep-or-delete swipes while retaining a final review checkpoint.
+- [Clean up a camera roll](https://keepyeet.app/guides/clean-up-camera-roll/): A focused, repeatable process for reducing camera-roll clutter.
+- [Choose a camera roll cleaner](https://keepyeet.app/guides/camera-roll-cleaner/): What a useful manual, review-first cleanup workflow should provide.
+- [Choose a photo cleaner app](https://keepyeet.app/guides/photo-cleaner-app/): How to compare photo-cleaner workflows, controls, filters, and safety steps.
+- [Free up phone storage](https://keepyeet.app/guides/free-up-phone-storage/): How photos, videos, and screenshots can affect available storage.
+- [Delete unwanted photos](https://keepyeet.app/guides/delete-unwanted-photos/): A deliberate process for removing clutter without using deletion quotas.
+- [Declutter a photo library](https://keepyeet.app/guides/declutter-photo-library/): A category-first and month-by-month cleanup routine.
+- [Organize photos by month](https://keepyeet.app/guides/organize-photos-by-month/): How to use calendar months as manageable review boundaries.
+- [Delete screenshots](https://keepyeet.app/guides/delete-screenshots/): How to separate useful records from expired screenshot clutter.
+- [Delete large videos to free space](https://keepyeet.app/guides/delete-large-videos-to-free-space/): A video-first storage review that keeps personal value in the decision.
+- [Choose a private photo cleaner](https://keepyeet.app/guides/private-photo-cleaner/): What on-device photo handling means and what it does not claim.
+- [Review photos before deleting](https://keepyeet.app/guides/review-photos-before-deleting/): Why a second review pass reduces accidental deletion risk.
+
+## Discovery
+
+- [XML sitemap](https://keepyeet.app/sitemap.xml): Canonical index of the homepage, guide library, all guide pages, and legal pages.
+- [Crawler policy](https://keepyeet.app/robots.txt): Crawl access for search engines and AI search agents.
+- [App ads declaration](https://keepyeet.app/app-ads.txt): Authorized digital advertising seller record for KeepYeet.
+
+## Optional
+
+- [Privacy policy](https://keepyeet.app/privacy/): Current KeepYeet privacy terms.
+- [Terms of use](https://keepyeet.app/terms/): Current KeepYeet terms.
+- [Google Play destination](https://play.google.com/store/apps/details?id=com.keepyeet.app): Configured Android package destination; confirm the listing is public before publication.

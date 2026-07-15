@@ -8,6 +8,12 @@ export type GuideFaq = {
   answer: string;
 };
 
+export type GuideSource = {
+  title: string;
+  url: string;
+  note: string;
+};
+
 export type Guide = {
   slug: string;
   keyword: string;
@@ -60,7 +66,7 @@ export const guides: Guide[] = [
     ],
     integrationTitle: "How KeepYeet makes swipe cleanup deliberate",
     integrationBody: [
-      "KeepYeet combines duplicate cleanup with swipe-based review. For focused sessions, swipe right to keep and left to mark for deletion, then narrow the library with month, screenshot, video, album, and Recents filters.",
+      "KeepYeet combines focused library filters with swipe-based review. Swipe right to keep and left to mark for deletion, then narrow the library with month, screenshot, video, album, and Recents filters.",
       "Before final deletion, KeepYeet gives you a review step for the items you marked. No account is required, photo review stays on-device, and visible progress helps you end a session with a concrete result instead of an unfinished feeling.",
     ],
     faqs: [
@@ -88,7 +94,7 @@ export const guides: Guide[] = [
     eyebrow: "Camera roll cleanup",
     title: "Clean Up Camera Roll in Short Sessions | KeepYeet",
     description:
-      "Clean up camera roll clutter with duplicate groups, focused filters, short sessions, and a final review before anything is removed.",
+      "Clean up camera roll clutter with focused filters, short sessions, and a final review before anything is removed.",
     h1: "How to Clean Up Your Camera Roll in Short Sessions",
     intro: [
       "Trying to clean an entire camera roll in one sitting usually creates more resistance than progress. The library contains different kinds of decisions: recent mistakes are easy to judge, screenshots are mostly practical, videos demand more storage attention, and older months can carry more emotional context. Treating all of them as one job makes the task unnecessarily heavy.",
@@ -145,11 +151,11 @@ export const guides: Guide[] = [
     eyebrow: "Choosing a cleanup workflow",
     title: "Camera Roll Cleaner: A Practical Guide | KeepYeet",
     description:
-      "Use a camera roll cleaner to surface duplicates, sort manageable batches, review deletions, and measure cleanup progress.",
+      "Use a camera roll cleaner to sort manageable batches, review deletions, and measure cleanup progress.",
     h1: "What a Useful Camera Roll Cleaner Should Help You Do",
     intro: [
       "A camera roll cleaner is most useful when it reduces the effort of reviewing a large library without taking the decisions away from you. The goal is not simply to produce a dramatic deletion count. It is to help you reach photos that need attention, judge them with enough context, and understand what will happen before anything is removed.",
-      "Look for a workflow that can surface duplicate groups and separate screenshots, videos, recent items, albums, and chronological groups. Those entry points support different cleanup goals. Final control, a review-before-delete stage, and visible progress matter more than vague cleanup promises.",
+      "Look for a workflow that separates screenshots, videos, recent items, albums, and chronological groups. Those entry points support different cleanup goals. Final control, a review-before-delete stage, and visible progress matter more than vague cleanup promises.",
     ],
     steps: [
       {
@@ -174,7 +180,7 @@ export const guides: Guide[] = [
     ],
     integrationTitle: "KeepYeet covers the practical camera roll cleaner basics",
     integrationBody: [
-      "KeepYeet provides duplicate cleanup plus focused views for months, screenshots, videos, albums, and Recents. In swipe sessions, right keeps an item and left marks it for deletion, making the workflow quick without surrendering personal judgment.",
+      "KeepYeet provides focused views for months, screenshots, videos, albums, and Recents. In swipe sessions, right keeps an item and left marks it for deletion, making the workflow quick without surrendering personal judgment.",
       "The review screen creates the final checkpoint, and completed sessions show cleanup progress and storage reclaimed. The photo workflow remains on-device, and you can begin without creating an account.",
     ],
     faqs: [
@@ -186,7 +192,7 @@ export const guides: Guide[] = [
       {
         question: "Should a camera roll cleaner delete photos automatically?",
         answer:
-          "No. KeepYeet can surface duplicate groups, but final deletion stays under your control and includes a review step so context stays with you.",
+          "No. KeepYeet keeps final deletion under your control and includes a review step so context stays with you.",
       },
       {
         question: "Can a camera roll cleaner help with videos too?",
@@ -202,11 +208,11 @@ export const guides: Guide[] = [
     eyebrow: "Photo cleaner app guide",
     title: "Photo Cleaner App: What to Look For | KeepYeet",
     description:
-      "Find a photo cleaner app with duplicate cleanup, focused filters, a review checkpoint, and progress you can see after each session.",
+      "Find a photo cleaner app with focused filters, a review checkpoint, and progress you can see after each session.",
     h1: "How to Choose a Photo Cleaner App You Will Actually Use",
     intro: [
       "The best photo cleaner app is not the one with the most dramatic promise. It is the one that lowers the effort required to return regularly, gives you enough context to make good decisions, and prevents an accidental tap from becoming an irreversible cleanup. A useful app should fit both a two-minute maintenance pass and a deeper review of older memories.",
-      "Evaluate the workflow rather than the marketing label. Check how it handles duplicate groups, screenshots, videos, recent items, albums, and older months; whether final deletion remains your choice; whether there is a review stage; and whether the app clearly shows what you accomplished.",
+      "Evaluate the workflow rather than the marketing label. Check how it handles screenshots, videos, recent items, albums, and older months; whether final deletion remains your choice; whether there is a review stage; and whether the app clearly shows what you accomplished.",
     ],
     steps: [
       {
@@ -215,7 +221,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Check who confirms deletion",
-        body: "An app can surface duplicate groups and make review faster, but the final judgment about what stays should remain yours.",
+        body: "An app can make review faster, but the final judgment about what stays should remain yours.",
       },
       {
         title: "Inspect the safety and progress signals",
@@ -231,14 +237,14 @@ export const guides: Guide[] = [
     ],
     integrationTitle: "Why KeepYeet is designed for repeatable cleanup",
     integrationBody: [
-      "KeepYeet opens directly into useful cleanup paths: duplicate groups, Recents, screenshots, videos, albums, and months. In swipe sessions, right keeps an item and left marks it for deletion, followed by a review step.",
+      "KeepYeet opens directly into useful cleanup paths: Recents, screenshots, videos, albums, and months. In swipe sessions, right keeps an item and left marks it for deletion, followed by a review step.",
       "There is no required account, photo review stays on-device, and the app records cleanup progress and storage reclaimed. Those choices make it practical for both quick maintenance and a gradual photo-library reset.",
     ],
     faqs: [
       {
         question: "What features matter most in a photo cleaner app?",
         answer:
-          "Prioritize duplicate cleanup, useful filters, control over final deletion, understandable progress, and a workflow short enough to repeat regularly.",
+          "Prioritize useful filters, control over final deletion, understandable progress, and a workflow short enough to repeat regularly.",
       },
       {
         question: "Do I need an account to use KeepYeet?",
@@ -288,8 +294,8 @@ export const guides: Guide[] = [
     ],
     integrationTitle: "Use KeepYeet to focus on the media that affects storage",
     integrationBody: [
-      "KeepYeet separates duplicate groups, videos, screenshots, Recents, albums, and months into focused sessions. Start with duplicates or storage-heavy videos, switch to screenshot clutter, and leave sentimental months for a more thoughtful review.",
-      "Whether you begin with duplicate groups or a focused swipe session, every final deletion remains under your control and review comes before removal. KeepYeet also shows storage reclaimed and overall cleanup progress.",
+      "KeepYeet separates videos, screenshots, Recents, albums, and months into focused sessions. Start with storage-heavy videos, switch to screenshot clutter, and leave sentimental months for a more thoughtful review.",
+      "Whether you begin with a video filter or another focused swipe session, every final deletion remains under your control and review comes before removal. KeepYeet also shows storage reclaimed and overall cleanup progress.",
     ],
     faqs: [
       {
@@ -349,7 +355,7 @@ export const guides: Guide[] = [
     integrationTitle: "KeepYeet keeps unwanted-photo decisions personal",
     integrationBody: [
       "In KeepYeet, you examine each item and swipe right to keep it or left to mark it for deletion. Filters for months, screenshots, videos, albums, and Recents let you apply one clear definition of unwanted media at a time.",
-      "The review step keeps the decision phase separate from final deletion. If your device's photo library supports a recovery period, confirmed deletions may also remain recoverable there for up to 30 days.",
+      "The review step keeps the decision phase separate from final deletion. Recovery then depends on the active photo library: Apple Photos documents 30 days in Recently Deleted, while Google Photos documents 60 days for backed-up items and 30 days for unbacked items.",
     ],
     faqs: [
       {
@@ -365,7 +371,7 @@ export const guides: Guide[] = [
       {
         question: "Can deleted photos be recovered?",
         answer:
-          "Recovery depends on the device's photo library. Where supported, deleted items may remain recoverable for up to 30 days.",
+          "Recovery depends on the device's photo library and backup state. Apple Photos documents 30 days in Recently Deleted; Google Photos documents 60 days for backed-up items and 30 days for unbacked items.",
       },
     ],
     relatedSlugs: ["review-photos-before-deleting", "declutter-photo-library"],
@@ -621,7 +627,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Keep final deletion under your control",
-        body: "Let the app surface duplicate groups, then confirm what stays and require a review screen before final removal.",
+        body: "Use focused filters to narrow the library, then confirm what stays and require a review screen before final removal.",
       },
     ],
     checklist: [
@@ -633,7 +639,7 @@ export const guides: Guide[] = [
     ],
     integrationTitle: "What on-device review means in KeepYeet",
     integrationBody: [
-      "KeepYeet's photo-sorting and deletion workflow stays on-device. No account is required, and duplicate cleanup plus right-to-keep and left-to-delete review keep final removal under your control.",
+      "KeepYeet's photo-sorting and deletion workflow stays on-device. No account is required, and right-to-keep and left-to-delete review keeps final removal under your control.",
       "The deletion review provides another deliberate checkpoint. On-device photo handling is not presented as a no-data-collection claim; the current store privacy label and privacy policy should be used for the app's broader disclosures.",
     ],
     faqs: [
@@ -691,7 +697,7 @@ export const guides: Guide[] = [
     integrationTitle: "KeepYeet separates swiping from final deletion",
     integrationBody: [
       "KeepYeet lets you move quickly through a focused month, screenshot, video, album, or Recents session. Swipe right to keep and left to mark for deletion, knowing the left-swipe choices still have a review stage ahead of them.",
-      "At the end, inspect the complete set before confirming removal. Where the device's photo library supports it, deleted items may remain recoverable for up to 30 days, but the in-app review is the best point to catch a mistake early.",
+      "At the end, inspect the complete set before confirming removal. Recovery depends on the active photo library and backup state, but the in-app review is the best point to catch a mistake early.",
     ],
     faqs: [
       {
@@ -707,7 +713,7 @@ export const guides: Guide[] = [
       {
         question: "Can I recover a photo after confirming deletion?",
         answer:
-          "Recovery depends on the device's photo library. Where supported, removed items may remain recoverable for up to 30 days.",
+          "Recovery depends on the device's photo library and backup state. Apple Photos documents 30 days in Recently Deleted; Google Photos documents 60 days for backed-up items and 30 days for unbacked items.",
       },
     ],
     relatedSlugs: ["swipe-delete-photos", "delete-unwanted-photos"],
@@ -716,4 +722,81 @@ export const guides: Guide[] = [
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((guide) => guide.slug === slug);
+}
+
+export const guidePublishedAt = "2026-07-15";
+export const guideUpdatedAt = "2026-07-15";
+
+const appleDeleteSource: GuideSource = {
+  title: "Apple Support: Delete photos on iPhone or iPad",
+  url: "https://support.apple.com/104967",
+  note: "Apple explains deletion, Recently Deleted, recovery, and the 30-day retention period.",
+};
+
+const googleDeleteSource: GuideSource = {
+  title: "Google Photos Help: Delete photos and videos",
+  url: "https://support.google.com/photos/answer/6128858?hl=en",
+  note: "Google explains Trash behavior and how retention differs by backup state.",
+};
+
+const appleStorageSource: GuideSource = {
+  title: "Apple Support: Manage photo and video storage",
+  url: "https://support.apple.com/105061",
+  note: "Apple explains how photos and videos use device storage and the available storage-management options.",
+};
+
+const googleStorageSource: GuideSource = {
+  title: "Google Photos Help: Manage storage",
+  url: "https://support.google.com/photos/answer/9284827?hl=en",
+  note: "Google explains photo and video storage, cleanup categories, and storage estimates.",
+};
+
+const appleAlbumsSource: GuideSource = {
+  title: "Apple Support: Create and work with photo albums",
+  url: "https://support.apple.com/guide/iphone/create-and-work-with-photo-albums-iphc0fc668ab/ios",
+  note: "Apple documents how albums organize photos and videos without removing them from the library.",
+};
+
+const appStoreSource: GuideSource = {
+  title: "KeepYeet on the Apple App Store",
+  url: "https://apps.apple.com/app/id6759491629",
+  note: "The public listing is the source for KeepYeet's current product behavior, compatibility, and privacy disclosures.",
+};
+
+const guideSources: Record<string, GuideSource[]> = {
+  "swipe-delete-photos": [appStoreSource, appleDeleteSource, googleDeleteSource],
+  "clean-up-camera-roll": [appStoreSource, appleStorageSource, googleStorageSource],
+  "camera-roll-cleaner": [appStoreSource, appleStorageSource, googleStorageSource],
+  "photo-cleaner-app": [appStoreSource, appleDeleteSource, googleDeleteSource],
+  "free-up-phone-storage": [appleStorageSource, googleStorageSource],
+  "delete-unwanted-photos": [appleDeleteSource, googleDeleteSource],
+  "declutter-photo-library": [appleAlbumsSource, appleStorageSource, googleStorageSource],
+  "organize-photos-by-month": [appStoreSource, appleAlbumsSource],
+  "delete-screenshots": [appStoreSource, appleStorageSource, googleStorageSource],
+  "delete-large-videos-to-free-space": [appStoreSource, appleStorageSource, googleStorageSource],
+  "private-photo-cleaner": [appStoreSource],
+  "review-photos-before-deleting": [appStoreSource, appleDeleteSource, googleDeleteSource],
+};
+
+const guideScreenshotIndexes: Record<string, number> = {
+  "swipe-delete-photos": 2,
+  "clean-up-camera-roll": 0,
+  "camera-roll-cleaner": 1,
+  "photo-cleaner-app": 0,
+  "free-up-phone-storage": 1,
+  "delete-unwanted-photos": 3,
+  "declutter-photo-library": 0,
+  "organize-photos-by-month": 1,
+  "delete-screenshots": 1,
+  "delete-large-videos-to-free-space": 1,
+  "private-photo-cleaner": 4,
+  "review-photos-before-deleting": 4,
+};
+
+export function getGuideSources(slug: string): GuideSource[] {
+  return guideSources[slug] ?? [appStoreSource];
+}
+
+export function getGuideScreenshotIndex(slug: string): number {
+  return guideScreenshotIndexes[slug] ?? 0;
 }

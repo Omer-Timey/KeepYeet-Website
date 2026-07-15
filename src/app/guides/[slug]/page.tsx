@@ -4,7 +4,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
 import { StoreButtons } from "@/components/store-buttons";
-import { getGuide, guides } from "@/data/guides";
+import {
+  getGuide,
+  getGuideScreenshotIndex,
+  getGuideSources,
+  guidePublishedAt,
+  guideUpdatedAt,
+  guides,
+} from "@/data/guides";
 import { screenshots, site } from "@/data/site";
 
 type GuidePageProps = {
@@ -35,6 +42,10 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       title: guide.title,
       description: guide.description,
       url: canonical,
+      siteName: site.name,
+      publishedTime: guidePublishedAt,
+      modifiedTime: guideUpdatedAt,
+      authors: [site.developerName],
       images: [
         {
           url: "/images/app-store/screenshot-03.webp",
@@ -59,54 +70,92 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
   if (!guide) notFound();
 
-  const index = guides.findIndex((item) => item.slug === guide.slug);
-  const screenshot = screenshots[index % screenshots.length];
+  const screenshot = screenshots[getGuideScreenshotIndex(guide.slug) % screenshots.length];
+  const sources = getGuideSources(guide.slug);
   const related = guide.relatedSlugs
     .map((relatedSlug) => getGuide(relatedSlug))
     .filter((item) => item !== undefined);
   const canonical = `${site.url}/guides/${guide.slug}/`;
 
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      headline: guide.h1,
-      description: guide.description,
-      mainEntityOfPage: canonical,
-      url: canonical,
-      datePublished: "2026-07-15",
-      dateModified: "2026-07-15",
-      author: { "@type": "Person", name: "Omer Yom Tov" },
-      publisher: {
-        "@type": "Organization",
-        name: site.name,
-        logo: {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${canonical}#webpage`,
+        url: canonical,
+        name: guide.title,
+        description: guide.description,
+        inLanguage: site.language,
+        isPartOf: { "@id": `${site.url}/#website` },
+        about: { "@id": `${site.url}/#app` },
+        breadcrumb: { "@id": `${canonical}#breadcrumb` },
+        mainEntity: { "@id": `${canonical}#article` },
+        primaryImageOfPage: {
           "@type": "ImageObject",
-          url: `${site.url}/images/app-store/keepyeet-icon.webp`,
+          url: `${site.url}${screenshot.src}`,
+          width: 600,
+          height: 1300,
         },
       },
-      image: `${site.url}${screenshot.src}`,
-      keywords: guide.keyword,
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
-        { "@type": "ListItem", position: 2, name: "Guides", item: `${site.url}/guides/` },
-        { "@type": "ListItem", position: 3, name: guide.h1, item: canonical },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: guide.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: { "@type": "Answer", text: faq.answer },
-      })),
-    },
-  ];
+      {
+        "@type": "Article",
+        "@id": `${canonical}#article`,
+        headline: guide.h1,
+        description: guide.description,
+        mainEntityOfPage: { "@id": `${canonical}#webpage` },
+        url: canonical,
+        inLanguage: site.language,
+        datePublished: guidePublishedAt,
+        dateModified: guideUpdatedAt,
+        author: { "@id": `${site.url}/#developer` },
+        publisher: { "@id": `${site.url}/#developer` },
+        image: {
+          "@type": "ImageObject",
+          url: `${site.url}${screenshot.src}`,
+          width: 600,
+          height: 1300,
+        },
+        about: { "@id": `${site.url}/#app` },
+        articleSection: "Photo cleanup guides",
+        keywords: [guide.keyword, "photo cleanup", "KeepYeet"],
+        citation: sources.map((source) => source.url),
+      },
+      {
+        "@type": "HowTo",
+        "@id": `${canonical}#howto`,
+        name: guide.h1,
+        description: guide.description,
+        inLanguage: site.language,
+        step: guide.steps.map((step, stepIndex) => ({
+          "@type": "HowToStep",
+          position: stepIndex + 1,
+          name: step.title,
+          text: step.body,
+          url: `${canonical}#step-${stepIndex + 1}`,
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonical}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
+          { "@type": "ListItem", position: 2, name: "Guides", item: `${site.url}/guides/` },
+          { "@type": "ListItem", position: 3, name: guide.h1, item: canonical },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${canonical}#faq`,
+        isPartOf: { "@id": `${canonical}#webpage` },
+        mainEntity: guide.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      },
+    ],
+  };
 
   return (
     <>
@@ -122,6 +171,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </nav>
               <p className="eyebrow"><span /> {guide.eyebrow}</p>
               <h1>{guide.h1}</h1>
+              <p>
+                <strong>By {site.developerName}, creator of KeepYeet</strong>
+                {" · "}Updated July 15, 2026
+              </p>
               {guide.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>
             <figure className="guide-hero__visual">
@@ -145,7 +198,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <h2 id="steps-heading">How to {guide.keyword}</h2>
               <ol className="article-steps">
                 {guide.steps.map((step, stepIndex) => (
-                  <li key={step.title}>
+                  <li id={`step-${stepIndex + 1}`} key={step.title}>
                     <span>{stepIndex + 1}</span>
                     <div><h3>{step.title}</h3><p>{step.body}</p></div>
                   </li>
@@ -179,6 +232,21 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   </details>
                 ))}
               </div>
+            </section>
+
+            <section aria-labelledby="sources-heading">
+              <p className="kicker">Verified references</p>
+              <h2 id="sources-heading">Platform and product sources</h2>
+              <ul>
+                {sources.map((source) => (
+                  <li key={source.url}>
+                    <a href={source.url} rel="noopener noreferrer" target="_blank">
+                      {source.title}
+                    </a>
+                    {" — "}{source.note}
+                  </li>
+                ))}
+              </ul>
             </section>
 
             <section className="related-guides" aria-labelledby="related-heading">
