@@ -5,9 +5,6 @@ import { SiteHeader } from "@/components/site-header";
 import { site } from "@/data/site";
 import "./globals.css";
 
-const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
-
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -68,15 +65,6 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   manifest: "/manifest.webmanifest",
-  verification:
-    googleVerification || bingVerification
-      ? {
-          ...(googleVerification ? { google: googleVerification } : {}),
-          ...(bingVerification
-            ? { other: { "msvalidate.01": bingVerification } }
-            : {}),
-        }
-      : undefined,
 };
 
 export const viewport: Viewport = {

@@ -6,8 +6,6 @@ import { StoreButtons } from "@/components/store-buttons";
 import { guides } from "@/data/guides";
 import { homepageFaqs, screenshots, site } from "@/data/site";
 
-const googlePlayIsLive = process.env.NEXT_PUBLIC_GOOGLE_PLAY_LIVE === "true";
-
 const features = [
   {
     emoji: "⏱️",
@@ -88,15 +86,11 @@ export default function HomePage() {
         alternateName: "KeepYeet: Swipe Delete Photos",
         applicationCategory: "UtilitiesApplication",
         applicationSubCategory: "Photo & Video",
-        operatingSystem: googlePlayIsLive ? "iOS 16.4 or later; Android" : "iOS 16.4 or later",
+        operatingSystem: "iOS 16.4 or later; Android",
         description: site.description,
         url: site.url,
-        downloadUrl: googlePlayIsLive
-          ? [site.appStoreUrl, site.googlePlayUrl]
-          : site.appStoreUrl,
-        sameAs: googlePlayIsLive
-          ? [site.appStoreUrl, site.googlePlayUrl]
-          : [site.appStoreUrl],
+        downloadUrl: [site.appStoreUrl, site.googlePlayUrl],
+        sameAs: [site.appStoreUrl, site.googlePlayUrl],
         image: `${site.url}/images/app-store/keepyeet-icon.webp`,
         screenshot: screenshots.map((shot) => `${site.url}${shot.src}`),
         featureList: [
