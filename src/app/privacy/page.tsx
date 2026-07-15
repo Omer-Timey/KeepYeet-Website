@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
-  const markdown = readFileSync(join(process.cwd(), "src/legal-docs/privacy-policy.md"), "utf8");
+  const markdown = readFileSync(join(process.cwd(), "src/content/legal/privacy-policy.md"), "utf8");
 
   return (
     <>

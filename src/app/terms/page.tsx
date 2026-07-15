@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
-  const markdown = readFileSync(join(process.cwd(), "src/legal-docs/terms-of-use.md"), "utf8");
+  const markdown = readFileSync(join(process.cwd(), "src/content/legal/terms-of-use.md"), "utf8");
 
   return (
     <>

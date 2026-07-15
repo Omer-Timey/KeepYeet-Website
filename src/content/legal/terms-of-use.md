@@ -180,7 +180,7 @@ These terms are governed by the laws of the **State of Israel**. Any disputes re
 
 ## Get in Touch
 
-Questions about these terms? Reach us at [omeryomtov@gmail.com](mailto:omeryomtov@gmail.com) or +972 0529573544.
+Questions about these terms? Reach us at [omeryomtov@gmail.com](mailto:omeryomtov@gmail.com).
 
 ---
 
