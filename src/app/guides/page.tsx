@@ -1,0 +1,71 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { DownloadCard } from "@/components/download-card";
+import { JsonLd } from "@/components/json-ld";
+import { guides } from "@/data/guides";
+import { site } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Photo Cleanup Guides",
+  description:
+    "Practical guides for camera roll cleanup, swipe photo deletion, screenshot clutter, phone storage, and safer review-first photo cleaning.",
+  alternates: { canonical: "/guides/" },
+  openGraph: {
+    title: "Photo Cleanup Guides | KeepYeet",
+    description:
+      "Twelve practical guides for cleaning photos and videos without losing control of what stays or goes.",
+    url: "/guides/",
+  },
+};
+
+export default function GuidesPage() {
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "KeepYeet photo cleanup guides",
+    itemListElement: guides.map((guide, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: guide.h1,
+      url: `${site.url}/guides/${guide.slug}/`,
+    })),
+  };
+
+  return (
+    <>
+      <JsonLd data={itemList} />
+      <header className="subpage-hero">
+        <div className="shell subpage-hero__inner">
+          <p className="eyebrow"><span /> KeepYeet guides</p>
+          <h1>Photo cleanup answers for the exact mess in your library.</h1>
+          <p>
+            From swipe deletion to screenshot clutter and full-phone storage,
+            these guides give you a practical process first, then show how
+            KeepYeet makes it faster.
+          </p>
+        </div>
+      </header>
+      <section className="section section--paper">
+        <div className="shell">
+          <div className="guide-grid guide-grid--all">
+            {guides.map((guide) => (
+              <Link
+                className="guide-card"
+                href={`/guides/${guide.slug}/`}
+                key={guide.slug}
+              >
+                <span className="guide-card__tag">{guide.eyebrow}</span>
+                <h2>{guide.h1}</h2>
+                <p>{guide.description}</p>
+                <strong className="guide-card__cta">
+                  Read the guide <span aria-hidden="true">→</span>
+                </strong>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <DownloadCard headingId="guides-download-heading" />
+    </>
+  );
+}
