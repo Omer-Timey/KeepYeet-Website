@@ -1,187 +1,159 @@
 # Terms of Use
 
-**Last updated: March 14, 2026**
+**Effective date and last updated: July 17, 2026**
 
 ---
 
-Omer Yom Tov, operating as **KeepYeet**, grants you a license to use the KeepYeet mobile application (the **App**) and any future updates or improvements to it, subject to the terms below. Downloading, installing, or using the App means you accept these terms.
+These Terms of Use (the **"Terms"**) govern your use of the KeepYeet mobile application, available on iOS and Android (the **"App"**). These Terms are an agreement between you and **Omer Yom Tov (KeepYeet)** ("KeepYeet," "we," "us," or "our"). They apply only to the App and not to any website.
+
+By downloading, installing, or using the App, or by tapping `Continue` where these Terms are presented, you agree to these Terms. If you do not agree, do not use the App. Our [Privacy Policy](https://keepyeet.app/privacy) explains how information is handled. Accepting these Terms does not by itself constitute consent to every form of data processing; privacy choices and consent requests are handled separately where required.
 
 ---
 
-## Your Personal Data & Privacy
+## Eligibility and No KeepYeet Account
 
-Any personal data collected in connection with your use of the App is handled in accordance with our [Privacy Policy](https://keepyeet.app/privacy).
+You must be at least 13 years old to use the App. If you have not reached the age at which you may enter into this agreement or authorise purchases independently where you live, a parent or legal guardian must review and accept these Terms for you and authorise any purchase.
 
-By tapping `Continue` on the welcome screen and then using KeepYeet, you acknowledge and agree that the App may initialize connected third-party services used for analytics, advertising, App Tracking Transparency handling, purchase support, and restore flows, as described in the Privacy Policy.
-
-Keep in mind that information transmitted over the internet through third-party SDKs integrated into the App is subject to those providers' own privacy practices and technical infrastructure.
+KeepYeet does not require or provide a KeepYeet account, login, registration, or user profile. You may still need an Apple or Google store account to download the App or complete and restore purchases. Those store accounts are operated by Apple or Google, not KeepYeet.
 
 ---
 
-## What You're Allowed to Do
+## Licence and Platform Terms
 
-By agreeing to these terms, you are permitted to:
+For the iOS version of the App, the licence is governed by Apple's [Standard Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) (the **"Apple Standard EULA"**). These Terms supplement the Apple Standard EULA for KeepYeet-specific matters and do not replace it.
 
-- Download and install the App on your personal iOS device for your own use; and
-- Receive and install any updates, patches, or bug fixes we release for the App.
+For the Android version, subject to these Terms and the applicable [Google Play Terms of Service](https://play.google.com/intl/en_us/about/play-terms/index.html), KeepYeet grants you a limited, personal, non-exclusive, non-commercial, and non-transferable licence to install and use the App on devices you own or control. This restriction does not prevent sharing expressly authorised by the applicable app store or anything that applicable law does not permit us to restrict.
 
----
-
-## The App is for Your Personal Use Only
-
-This license is personal to you. You may not give, sell, or transfer the App to anyone else under any circumstances. If you sell or give away a device that has the App installed on it, you must uninstall and remove the App beforehand.
+The App is licensed, not sold. No licence is granted except as expressly stated in these Terms, the Apple Standard EULA, applicable store terms, or mandatory law.
 
 ---
 
-## We May Update These Terms
+## Ownership of the App and Your Media
 
-We reserve the right to revise these terms at any time. When we make significant changes, we will try to notify you through the App or our website at [keepyeet.app](https://keepyeet.app).
+KeepYeet or its licensors retain all rights in the App, including its code, design, interface, branding, text, graphics, databases, and other protected elements. These Terms do not transfer any ownership or intellectual-property rights to you.
 
----
-
-## App Updates and Service Changes
-
-We may release updates to the App periodically to fix bugs, improve performance, add features, or stay compatible with the latest iOS versions. Some updates may be applied automatically, while others may require action from you.
-
-Choosing not to update the App may reduce functionality or prevent some features from working properly.
+You retain ownership of your photos and videos. KeepYeet does not receive an ownership or promotional licence to your media. You authorise the App to access and act on media only as needed to provide the functions you request on your device, such as reviewing, sorting, sharing, or deleting selected items. You are responsible for having the right or authority to access, manage, or share the media you use with the App.
 
 ---
 
-## Your Photos Stay on Your Device
+## Media Access, Sorting, and Deletion
 
-KeepYeet is built around on-device photo and video processing. Your photo library is reviewed and managed on your device, and we do not upload or store your photos or videos on our own servers.
+The intended gallery-cleaning experience requires permission broad enough for the App to access the relevant photo or media library. If sufficient permission is not granted, some or all App functions may be unavailable, and the App may direct you to your device settings.
 
----
+KeepYeet processes and sorts media on your device and does not upload your photo or video library to a KeepYeet-operated backend. Sorting decisions and deletion requests occur at your direction. Your operating system may also require confirmation before media is deleted or moved.
 
-## Internet Access and Connected Services
+On iOS, deleted items may be moved to **Recently Deleted**. On Android, the operating system or media provider may use a trash or deletion process. KeepYeet does not control whether an item can be recovered, where it is placed, how long it remains recoverable, when it is permanently deleted, or how much storage is ultimately released.
 
-Although photo processing happens on-device, KeepYeet depends on connected third-party services for analytics, advertising, and in-app purchase infrastructure.
-
-You may be able to reach parts of the App, including the Home screen, without internet access. However, **starting a new cleaning session requires an internet connection** because the App depends on ads, analytics, and purchase-related services to support the product.
-
-If internet connectivity is unavailable, KeepYeet may delay, limit, or disable certain features until connectivity returns.
+Review your selections carefully before confirming deletion and maintain suitable independent backups of media that matters to you. Media counts, file sizes, cleanup estimates, and storage calculations displayed by the App may be approximate.
 
 ---
 
-## Full Photos Access Required
+## Free Access, Advertising, and Paid Offerings
 
-KeepYeet requires **Full Photos Access** to deliver its intended gallery-cleaning experience. Limited Photos access is not supported because the App needs access to your full library to build and manage cleaning sessions across your media collection.
+The App may make some functionality available without payment. Free access may be subject to eligibility requirements, usage limits, feature limits, advertising, or other conditions presented in the App. Free access and its conditions are not promised permanently and may differ by platform, region, App version, store, or current offering.
 
-If you do not grant Full Photos Access, parts of the App may not function or may direct you to device settings to update your permissions.
+The App may include advertising or advertising-supported access. Advertising format, frequency, placement, provider, eligibility, availability, and any associated App access or benefit may vary or change. Advertising or any associated benefit is not guaranteed to be available. Current advertising providers and related data practices are described in the [Privacy Policy](https://keepyeet.app/privacy).
 
----
+KeepYeet may offer paid features or access through recurring or non-recurring purchases, trials, promotions, or other paid offerings. Availability may differ by platform, region, App version, store, eligibility, or time. No paid offering is available unless it is presented in the App or by the applicable store.
 
-## Technical Data Collected by Our Partners
+Before you confirm a purchase, the App or applicable store will display the applicable transaction details, including, where relevant, the price, currency, taxes, billing or renewal period, whether the purchase renews, eligibility, promotion terms, and included benefits. Those purchase-specific disclosures and the store confirmation govern that transaction, subject to these Terms and mandatory law.
 
-By using the App after tapping `Continue`, you acknowledge that our third-party partners, including PostHog, Google AdMob, RevenueCat, and Apple, may collect or receive certain technical, advertising, and purchase-related data as described in our [Privacy Policy](https://keepyeet.app/privacy).
+If a paid offering renews automatically, it will renew unless cancelled or otherwise ended under the applicable store rules. The renewal interval and then-applicable price are shown by the store, and any change affecting an existing purchaser is subject to the notice, consent, and other requirements imposed by the store or applicable law. If a trial or promotion is offered, its eligibility, duration, conversion, and cancellation terms are those displayed before purchase. Uninstalling the App, stopping use, or terminating this licence does not by itself cancel an automatically renewing purchase.
 
-This may include linked identifiers, product interaction data, diagnostics, ad-related data, and purchase or entitlement metadata used to support the App, measure usage, serve ads, and manage purchases.
+Purchases, renewals, cancellations, restores, refunds, withdrawal rights, price changes, billing disputes, and store-account matters are handled under the rules of the Apple App Store or Google Play, as applicable, together with mandatory local law. KeepYeet does not receive or store your full payment-card details.
 
----
+A purchase may not transfer between iOS and Android or between different store accounts unless the applicable offering and stores support that transfer. Rights associated with a completed purchase are determined by its purchase-specific disclosures, the applicable store rules, and mandatory law for the period or scope of that purchase. A purchase does not grant every current or future feature or guarantee that the App, any particular feature, platform, or third-party service will remain available or unchanged indefinitely.
 
-## Advertising Inside the App
-
-KeepYeet is free to use and supported in part by in-app advertising through **Google AdMob**. After you tap `Continue`, iOS may request permission under Apple's App Tracking Transparency (ATT) framework. If you deny tracking, KeepYeet will request non-personalized ads where applicable.
-
-You can manage ATT choices at any time in **Privacy & Security -> Tracking** on your iOS device.
+You are responsible for device, internet, mobile-data, telecommunications, and store-account charges associated with using the App.
 
 ---
 
-## Purchases Made Inside the App
+## Connectivity, Notifications, and Third-Party Services
 
-Some features of the App are available as optional paid upgrades through **Apple's In-App Purchase** system and supporting infrastructure provided by **RevenueCat**. Transactions are governed by Apple's terms and conditions, and we do not store your payment card details.
+Local media-cleaning functions may work without internet access. Connected functions may require a working internet connection and the availability of app stores or third-party services. Interruptions, maintenance, provider changes, device settings, regional restrictions, or third-party decisions may delay, limit, or prevent those functions.
 
-Purchase status, entitlement management, restore functionality, and related purchase attribution may rely on connected third-party services.
+If you enable notifications, the App may send them for App-related purposes. You can manage notifications in your device settings. Notifications and reminders are provided as a convenience and may be delayed or unavailable; you remain responsible for managing purchases and deadlines through the applicable store.
 
----
-
-## Third-Party Links and Services
-
-The App or our website may contain links to third-party websites or services. We do not control those third parties and are not responsible for their content, availability, or privacy practices.
+The App may contain links to, depend on, or interoperate with third-party services. Those services may have their own terms and privacy notices. KeepYeet does not control their independent content, operation, availability, security, or decisions and is responsible for them only to the extent required by applicable law.
 
 ---
 
-## Things You Are Not Permitted to Do With the App
+## App, Offering, and Business Changes
 
-You agree not to:
+KeepYeet may make prospective changes that are reasonably necessary for product improvement, commercial sustainability or material changes in operating costs, security, technical or compatibility needs, provider availability or terms, app-store requirements, or legal compliance. This may include adding, removing, restructuring, replacing, suspending, or discontinuing the App or aspects of it, including features, free access, usage or feature limits, future paid offerings and billing structures, prices for future purchases, advertising and monetisation methods, providers and connected services, supported devices or operating-system versions, design, UX/UI, and onboarding.
 
-- Rent, lease, lend, or sublicense the App to any third party without our prior written consent;
-- Copy or reproduce the App beyond what is necessary for normal personal use or operational backup;
-- Modify, translate, adapt, merge, or incorporate the App into any other software or product;
-- Reverse engineer, decompile, or disassemble the App or attempt to derive its source code.
+Free-access conditions and future offerings may be changed prospectively. Where applicable law grants protections for ongoing access, a materially negative change will be made without additional cost and with clear advance notice, and KeepYeet will provide any continuation, cancellation, termination, refund, or other remedy required by the applicable store rules or mandatory law. A price change affecting an existing automatically renewing purchase will take effect only through the applicable store process and with any notice or consent the store or law requires.
 
----
-
-## Prohibited Uses
-
-You must not use the App:
-
-- For any unlawful purpose or in any way that violates applicable laws or regulations;
-- To engage in fraudulent, harmful, or malicious activity, including attempting to interfere with or compromise the App's functionality or connected services;
-- In a way that infringes our intellectual property rights or those of any third party;
-- To overburden, damage, or impair the systems of the App or our third-party service providers.
+We may release updates for security, compatibility, bug fixes, performance, legal compliance, or new and changed functionality. Some updates may be automatic and others may require action from you. Choosing not to install an available update may affect functionality, security, or compatibility.
 
 ---
 
-## Ownership and Intellectual Property
+## Acceptable Use
 
-All intellectual property rights in the App, including its design, code, and content, belong to Omer Yom Tov (KeepYeet) or our licensors. The App is licensed to you, not sold.
+Except where applicable law permits otherwise, you must not:
 
----
-
-## Our Liability to You
-
-We are responsible for foreseeable loss or damage caused directly by our failure to meet these terms or to act with reasonable care and skill. We are not liable for losses that were not foreseeable at the time you accepted these terms.
-
-Nothing in these terms limits liability where it would be unlawful to do so, such as for gross negligence or fraud.
-
-**The App is for personal use only.** We are not liable for commercial losses, including loss of profit, business interruption, or loss of business opportunity.
-
-**Back up your photos.** KeepYeet is designed to operate safely on-device, but you are responsible for maintaining independent backups of your photos and data.
+- Rent, lease, lend, sell, sublicense, redistribute, or commercially exploit the App;
+- Copy, modify, translate, adapt, merge, or create derivative works from the App;
+- Reverse engineer, decompile, disassemble, or attempt to derive the App's source code;
+- Bypass or interfere with usage limits, purchase checks, security measures, permissions, or technical restrictions;
+- Access the App through unauthorised automated means, introduce malicious code, or disrupt the App or connected services;
+- Use the App unlawfully, fraudulently, or in a way that infringes another person's rights.
 
 ---
 
-## Termination of Access
+## Availability and Warranties
 
-We may suspend or terminate your right to use the App if you materially breach these terms. Where the breach can be remedied, we will usually provide a reasonable opportunity to do so first.
+To the maximum extent permitted by law, the App is provided **"as is"** and **"as available."** KeepYeet does not guarantee that the App will always be available, uninterrupted, error-free, secure, compatible with every device or operating-system version, or that estimates and results will always be complete or accurate.
 
-If your access is terminated:
-
-- You must immediately stop using the App; and
-- You must delete the App from all of your devices.
+KeepYeet may perform maintenance or experience failures involving devices, networks, stores, operating systems, or third-party services. Nothing in these Terms excludes any warranty, digital-content remedy, or consumer right that applicable law does not permit us to exclude.
 
 ---
 
-## Transferring This Agreement
+## Liability
 
-We may transfer our rights and obligations under these terms to another entity, such as in a business acquisition. If that happens, your rights under these terms will not be reduced.
+Nothing in these Terms excludes or limits liability where doing so would be unlawful, including liability for fraud, wilful misconduct, death or personal injury caused by negligence, or any other liability that cannot be excluded under applicable law.
 
-You may not transfer your rights or obligations under these terms without our prior written consent.
+Subject to that rule and to the maximum extent permitted by law, KeepYeet is not responsible for losses that were not reasonably foreseeable when you accepted these Terms, indirect losses, or commercial losses such as lost profit, lost revenue, business interruption, or lost opportunity. The App is intended for personal, non-commercial use.
 
----
-
-## Severability
-
-Each provision of these terms is independent. If any provision is found unlawful or unenforceable, the remaining provisions will continue to apply.
+KeepYeet is not responsible for loss caused solely by your deletion selections, failure to maintain a backup, device or operating-system behaviour, store or provider decisions, internet failure, or other events outside KeepYeet's reasonable control, except to the extent the loss was caused by KeepYeet's breach of these Terms, negligence, or another matter for which liability cannot lawfully be excluded.
 
 ---
 
-## No Waiver
+## Termination
 
-Failing to enforce any part of these terms on one occasion does not waive our right to enforce it later.
+Your licence to use the App may terminate if you materially breach these Terms. Where appropriate and reasonably possible, we will give you an opportunity to remedy a remediable breach. On termination, you must stop using and delete the App.
 
----
-
-## Governing Law and Jurisdiction
-
-These terms are governed by the laws of the **State of Israel**. Any disputes relating to these terms or your use of the App are subject to the exclusive jurisdiction of the competent courts in Israel.
+Termination, deletion, or uninstallation does not automatically cancel a purchase or renewal. You must manage automatically renewing purchases through the applicable store. Any rights and obligations that by their nature should continue after termination will remain in effect.
 
 ---
 
-## Get in Touch
+## Transfer, Severability, and No Waiver
 
-Questions about these terms? Reach us at [omeryomtov@gmail.com](mailto:omeryomtov@gmail.com).
+We may transfer our rights and obligations under these Terms as part of a reorganisation, financing, sale, acquisition, or transfer of the App or business, provided this does not reduce rights that applicable law does not permit us to reduce. You may not transfer your rights or obligations except where the applicable store or law permits it.
+
+If any provision is found unlawful or unenforceable, it will be enforced to the greatest extent permitted and the remaining provisions will continue in effect. A failure or delay in enforcing a provision is not a waiver of the right to enforce it later.
 
 ---
 
-© 2026 Omer Yom Tov (KeepYeet) · [Terms of Use](https://keepyeet.app/terms) · [Privacy Policy](https://keepyeet.app/privacy)
+## Changes to These Terms
+
+We may update these Terms prospectively for legal, security, technical, platform, provider, operational, product, or business reasons. Unless a later date is stated, updated Terms take effect prospectively on the effective date shown at the top. Where required, we will provide notice or request renewed acceptance before a material change takes effect.
+
+Changes do not retroactively rewrite completed purchases or remove rights that applicable law does not permit us to remove. If you do not agree to updated Terms, you should stop using the App. Stopping use does not automatically cancel an automatically renewing purchase.
+
+---
+
+## Governing Law and Disputes
+
+These Terms are governed by the laws of the **State of Israel**. This choice does not deprive you of mandatory consumer protections provided by the law of your country of residence or any non-waivable right to bring proceedings in a competent local court.
+
+Before starting a formal dispute, you may contact us at [omer@keepyeet.app](mailto:omer@keepyeet.app) so we can try to resolve the issue in good faith. This optional step does not limit any right or remedy available under applicable law.
+
+---
+
+## Contact
+
+Questions about these Terms may be sent to:
+
+- **Omer Yom Tov (KeepYeet)**
+- **Email:** [omer@keepyeet.app](mailto:omer@keepyeet.app)
